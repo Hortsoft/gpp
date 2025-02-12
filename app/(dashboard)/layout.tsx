@@ -42,35 +42,90 @@ function Header() {
             Pricing
           </Link>
           {user ? (
-            <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-              <DropdownMenuTrigger>
-                <Avatar className="cursor-pointer size-9">
-                  <AvatarImage alt={user.name || ''} />
-                  <AvatarFallback>
-                    {user.email
-                      .split(' ')
-                      .map((n) => n[0])
-                      .join('')}
-                  </AvatarFallback>
-                </Avatar>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="flex flex-col gap-1">
-                <DropdownMenuItem className="cursor-pointer">
-                  <Link href="/dashboard" className="flex w-full items-center">
-                    <Home className="mr-2 h-4 w-4" />
-                    <span>Dashboard</span>
-                  </Link>
-                </DropdownMenuItem>
-                <form action={handleSignOut} className="w-full">
-                  <button type="submit" className="flex w-full">
-                    <DropdownMenuItem className="w-full flex-1 cursor-pointer">
-                      <LogOut className="mr-2 h-4 w-4" />
-                      <span>Sign out</span>
-                    </DropdownMenuItem>
-                  </button>
-                </form>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <>
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  Ideas
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="flex flex-col gap-1">
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Link href="/option1" className="flex w-full items-center">
+                      <span>Option 1</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Link href="/option2" className="flex w-full items-center">
+                      <span>Option 2</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  Projects
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="flex flex-col gap-1">
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Link href="/option3" className="flex w-full items-center">
+                      <span>Option 3</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Link href="/option4" className="flex w-full items-center">
+                      <span>Option 4</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  Maintenance
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="flex flex-col gap-1">
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Link href="/option5" className="flex w-full items-center">
+                      <span>Option 5</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Link href="/option6" className="flex w-full items-center">
+                      <span>Option 6</span>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+                <DropdownMenuTrigger>
+                  <Avatar className="cursor-pointer size-9">
+                    <AvatarImage alt={user.name || ''} />
+                    <AvatarFallback>
+                      {user.email
+                        .split(' ')
+                        .map((n) => n[0])
+                        .join('')}
+                    </AvatarFallback>
+                  </Avatar>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="flex flex-col gap-1">
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Link href="/dashboard" className="flex w-full items-center">
+                      <Home className="mr-2 h-4 w-4" />
+                      <span>Dashboard</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <form action={handleSignOut} className="w-full">
+                    <button type="submit" className="flex w-full">
+                      <DropdownMenuItem className="w-full flex-1 cursor-pointer">
+                        <LogOut className="mr-2 h-4 w-4" />
+                        <span>Sign out</span>
+                      </DropdownMenuItem>
+                    </button>
+                  </form>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+            </>
           ) : (
             <Button
               asChild
