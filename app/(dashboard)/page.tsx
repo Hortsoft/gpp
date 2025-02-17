@@ -14,7 +14,7 @@ export default function HomePage() {
                 <span className="block text-orange-500">Designing Excellent Spaces</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-              Designing Excellent Spaces
+                Designing Excellent Spaces
               </p>
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                 <a
@@ -49,7 +49,7 @@ export default function HomePage() {
               </div>
               <div className="mt-5">
                 <h2 className="text-lg font-medium text-gray-900">
-                  Next.js and React
+                  Next.js and cow
                 </h2>
                 <p className="mt-2 text-base text-gray-500">
                   Leverage the power of modern web technologies for optimal
